@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 import pandas as pd 
+
+import matplotlib.pyplot as plt
 # Load the data
 
 # -20 for the name of this project StockPricePrediction
@@ -14,8 +16,8 @@ propertiesFolder_path = save_path + "Properties"
 # Example of used
 # user_text = tools.readProperty(propertiesFolder_path, 'StockPricePrediction', 'user_text=')
 
-df = pd.read_csv('Project/StockPricePrediction/BTC-USD.csv')
-# df = pd.read_csv('Project/StockPricePrediction/AMZN.csv')
+df = pd.read_csv('BTC-USD.csv')
+# df = pd.read_csv('AMZN.csv')
 
 df.set_index(pd.to_datetime(df['Date'].values))
 # Give the index a name
@@ -46,12 +48,25 @@ print(tree.score(X_test, Y_test))
 
 # Show the models predictions
 tree_predictions = tree.predict(X_test)
+print("Show the models predictions")
 print(tree_predictions)
 
 # Show the actual values
+print("The actual values")
 print(Y_test)
 
 
+# path = tree.cost_complexity_pruning_path(X_train, Y_train)
+# ccp_alphas, impurities = path.ccp_alphas, path.impurities
 
 
 
+# fig, ax = plt.subplots()
+# ax.plot(ccp_alphas[:-1], impurities[:-1], marker='o', drawstyle="steps-post")
+# ax.set_xlabel("effective alpha")
+# ax.set_ylabel("total impurity of leaves")
+# ax.set_title("Total Impurity vs effective alpha for training set")
+
+
+
+# plt.show()

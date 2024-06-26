@@ -13,3 +13,12 @@ pip install google-colab
 
 
 https://finance.yahoo.com/quote/BTC-USD/history?p=BTC-USD
+
+https://pythonprogramminglanguage.com/what-is-machine-learning/
+https://pythonprogramminglanguage.com/python-machine-learning/
+
+https://pip.pypa.io/en/stable/reference/pip_uninstall/
+
+https://python-binance.readthedocs.io/en/latest/
+https://www.youtube.com/watch?v=fpqzXgZjSqM
+https://www.youtube.com/watch?v=Dmr2ZOGAEVY&feature=youtu.be
